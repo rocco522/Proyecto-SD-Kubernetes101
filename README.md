@@ -39,7 +39,7 @@ Consultar versión de minikube:
 minikube start
 ```
 
-<img src="https://www.dropbox.com/s/wayip6rtznp7202/7.PNG">
+<img src="http://ricardodelgado.com.co/sd/7.PNG">
 
 
 ## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
