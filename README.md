@@ -1,4 +1,6 @@
-# kubernetes-101
+
+# Proyecto-SD-Kubernetes101
+
 Proyecto de Sistemas Distribuidos para construir y desplegar una app sencilla de Python en Kubernetes. 
 
 ## Acerca de Kubernetes
@@ -17,15 +19,15 @@ Un nodo es una máquina virtual o un computador físico que sirve como una máqu
 
 Al desplegar una aplicación  en Kubernetes, se le indica al Maestro que inicie los contenedores de la aplicación. En este momento, el Maestro programa los contenedores para que correr en los nodos del cluster. Los nodos se comunican con el Maestro usando el API Kubernetes, el cual es expuesto por el Maestro.
 
-## Proyecto
-
-Para la elaboración de este proyecto se han usado las siguientes herramientas
-
--VirtualBox
--Docker
--Minikube (versión mínima de kubernetes)
-
 ## Preparar el ambiente de kubernetes instalando minikube.
+
+Instalar VirtualBox
+
+Instalar Docker Toolbox for Windows
+
+Instalar la última versión de Minikube for Windows
+
+## Configuración
  
 Para verificar el estado de minikube:
 
@@ -34,6 +36,12 @@ minikube status
 ```
 
 Consultar versión de minikube: 
+
+```
+minikube version
+```
+
+Lanzar minikube 
 
 ```
 minikube start
@@ -45,24 +53,29 @@ Se puede comprobar en VirtualBox la VM corriendo
 
 <img src="http://ricardodelgado.com.co/sd/8.PNG">
 
-## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
+## Desplegar el proyecto.
+
+Construir una imagen de docker desde un proyecto existente en python
+
 ```
 cd Docker
-docker build -t <DOCKER_HUB_USER>/web .
-docker push <DOCKER_HUB_USER>/web
+docker build -t rocco522/web .
+docker push rocco522/web
 ```
 
-## Launch the app with Docker Compose
+Lanzar la aplicación con Docker compose
 ```
 docker-compose up -d 
 ```
 
-## Test the app
+Probar la aplicación
 ```
 curl localhost:5000
 ```
 
-## Deploy the app to Kubernetes
+## Correr en kubernetes
+
+Desplegar la aplicación en Kubernetes
 ```
 cd ../Kubernetes
 kubectl create -f db-pod.yml
@@ -72,22 +85,22 @@ kubectl create -f web-svc.yml
 kubectl create -f web-rc.yml
 ```
 
-## Check that the Pods and Services are created
+Verificar que los pods y los servicios fueron creados
 ```
 kubectl get pods
 kubectl get svc
 ```
 
-## Get the NodePort for the web Service. Make a note of the port.
+Obtener el NodePort para el servicio web.
 ```
 kubectl describe svc web
 ```
 
-## Test the app by accessing the NodePort of one of the nodes.
+Test the app by accessing the NodePort of one of the nodes.
 
 ```
 kubectl get nodes
-curl <NODE_IP>:<NODEPORT>
+curl IP:PUERTO
 ```
 
 
@@ -98,4 +111,3 @@ curl <NODE_IP>:<NODEPORT>
 
 
 
-# Proyecto-SD-Kubernetes101
