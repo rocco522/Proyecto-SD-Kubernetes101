@@ -63,10 +63,16 @@ docker build -t rocco522/web .
 docker push rocco522/web
 ```
 
+<img src="http://ricardodelgado.com.co/sd/4.PNG">
+
+<img src="http://ricardodelgado.com.co/sd/4.5.PNG">
+
 Lanzar la aplicación con Docker compose
 ```
 docker-compose up -d 
 ```
+
+<img src="http://ricardodelgado.com.co/sd/5.5.PNG">
 
 Probar la aplicación
 ```
