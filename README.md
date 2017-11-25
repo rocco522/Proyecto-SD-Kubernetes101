@@ -78,6 +78,7 @@ Probar la aplicación
 ```
 curl localhost:5000
 ```
+<img src="http://ricardodelgado.com.co/sd/6.PNG">
 
 ## Correr en kubernetes
 
