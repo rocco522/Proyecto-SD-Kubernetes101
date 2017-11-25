@@ -41,6 +41,9 @@ minikube start
 
 <img src="http://ricardodelgado.com.co/sd/7.PNG">
 
+Se puede comprobar en VirtualBox la VM corriendo
+
+<img src="http://ricardodelgado.com.co/sd/8.PNG">
 
 ## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
 ```
