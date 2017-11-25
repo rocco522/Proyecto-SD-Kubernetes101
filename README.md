@@ -17,14 +17,15 @@ Un nodo es una máquina virtual o un computador físico que sirve como una máqu
 
 Al desplegar una aplicación  en Kubernetes, se le indica al Maestro que inicie los contenedores de la aplicación. En este momento, el Maestro programa los contenedores para que correr en los nodos del cluster. Los nodos se comunican con el Maestro usando el API Kubernetes, el cual es expuesto por el Maestro.
 
-##Proyecto
+## Proyecto
+
 Para la elaboración de este proyecto se han usado las siguientes herramientas
 
 -VirtualBox
 -Docker
 -Minikube (versión mínima de kubernetes)
 
-##Preparar el ambiente de kubernetes instalando minikube.
+## Preparar el ambiente de kubernetes instalando minikube.
  
 Para verificar el estado de minikube:
 
@@ -32,12 +33,13 @@ Para verificar el estado de minikube:
 minikube status
 ```
 
-Iniciar minikube: 
+Consultar versión de minikube: 
 
 ```
 minikube start
 ```
 
+<img src="https://www.dropbox.com/s/wayip6rtznp7202/7.PNG?dl=0">
 
 ## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
 ```
