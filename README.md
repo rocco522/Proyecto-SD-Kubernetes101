@@ -59,6 +59,11 @@ Construir una imagen de docker desde un proyecto existente en python
 
 ```
 cd Docker
+```
+
+<img src="http://ricardodelgado.com.co/sd/1.PNG">
+
+```
 docker build -t rocco522/web .
 docker push rocco522/web
 ```
@@ -103,18 +108,8 @@ Obtener el NodePort para el servicio web.
 kubectl describe svc web
 ```
 
-Test the app by accessing the NodePort of one of the nodes.
-
+Probar la app 
 ```
 kubectl get nodes
 curl IP:PUERTO
 ```
-
-
-
-
-
-
-
-
-
